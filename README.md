@@ -33,3 +33,46 @@ Após insttalar o NodeJS abra um terminal e digite o seguinte comando para insta
 npm i -g typescript
 ```
 
+Verifique se foi instalado corretamente com o comando:
+
+```
+tsc -v
+```
+
+### Projeto com TypeScript
+
+Pastas:
+
+* **dist** - Deploy;
+* **src** - Código.
+
+Todo projeto de TypeScript precisa de um arquivo de configuração para estabelecer mudanças necessárias e dizer que é um projeto TypeScript.
+Para gerar esse arquivo de configuração execute o comando:
+
+```
+tsc --init
+```
+
+Neste arquivo é possível configurar a versão da compilação JavaScript, o caminho do arquivo em JS gerado pela compilação do TS, etc.
+
+#### Alterações no aruivo de configuração
+
+Diretório de desenvolvimento colocado no root do arquivo:
+
+```
+"rootDir": "./src",
+```
+
+Diretório de saída/deploy, onde será gerado o arquivo JS:
+
+```
+"outDir": "./dist/js/",
+```
+
+#### Compilação
+
+Para compilar um projeto TypeScript e gerar em JS execute o seguinte comando no terminal:
+
+```
+tsc
+```
