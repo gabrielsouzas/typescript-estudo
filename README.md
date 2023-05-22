@@ -55,7 +55,7 @@ tsc --init
 
 Neste arquivo é possível configurar a versão da compilação JavaScript, o caminho do arquivo em JS gerado pela compilação do TS, etc.
 
-#### Alterações no aruivo de configuração
+#### Alterações no arquivo de configuração
 
 Diretório de desenvolvimento colocado no root do arquivo:
 
@@ -69,6 +69,12 @@ Diretório de saída/deploy, onde será gerado o arquivo JS:
 "outDir": "./dist/js/",
 ```
 
+Remover comentários do arquivo gerado em JS:
+
+```
+"removeComments": true,
+```
+
 #### Compilação
 
 Para compilar um projeto TypeScript e gerar em JS execute o seguinte comando no terminal:
@@ -76,3 +82,25 @@ Para compilar um projeto TypeScript e gerar em JS execute o seguinte comando no 
 ```
 tsc
 ```
+
+Para que o código em TS seja compilado simultaneamente a cada salvamento para JS, execute o seguinte comando:
+
+```
+tsc -w
+```
+
+#### Tipagem
+
+Existem duas maneiras de definir tipos de variáveis em TypeScript:
+
+* **Inferência** - O TS define qual será o tipo da variável de acordo com a atribuição inicial;
+    * Exemplo:
+        ```
+        let x = 15;
+        ```
+
+* **Annotation** - O tipo da variável é informado explicitamente no código;
+    * Exemplo:
+        ```
+        let x: number = 15;
+        ```
